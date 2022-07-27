@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/blog', function () {
+    return view('posts');
+});
+
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Sabili Maulana",
+        "email" => "spacysbl.learn@gmail.com",
+        "image" => "https://avatars.githubusercontent.com/u/63346492?v=4"
+
+    ]);
 });
